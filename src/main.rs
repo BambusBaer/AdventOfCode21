@@ -9,7 +9,7 @@ fn main() {
             let len = input.len();
             let mut input_value = input.to_string();
             
-            //remove '\n'
+            //remove linebreak
             input_value.truncate(len - 2);
             match input_value.as_str() {
                 "1" => print!("Du hast die 1 gewaehlt"),
