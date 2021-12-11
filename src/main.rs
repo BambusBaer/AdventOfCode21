@@ -1,4 +1,5 @@
 use std::{io};
+mod file_handler;
 
 fn main() {
     println!("Welcher Tag soll ausgeführt werden?");
