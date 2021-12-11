@@ -1,5 +1,6 @@
 use std::{io};
 mod file_handler;
+mod sonar_sweep;
 
 fn main() {
     println!("Welcher Tag soll ausgeführt werden?");
@@ -13,7 +14,7 @@ fn main() {
             //remove linebreak
             input_value.truncate(len - 2);
             match input_value.as_str() {
-                "1" => print!("Du hast die 1 gewaehlt"),
+                "1" => sonar_sweep::sonar_sweep::execute_sonar_sweep_task(),
                 _ => println!("Trage eine Zahl von 1 bis 24 und nicht {0}!", input)
             }
         }
