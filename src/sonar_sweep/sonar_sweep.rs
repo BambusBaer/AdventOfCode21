@@ -22,7 +22,7 @@ pub fn execute_sonar_sweep_task() {
     
     for (position, item) in sonar_sweep_data.iter().enumerate() {
         if sonar_sweep_data.iter().count() > position + 2 {
-            let sum = item.as_ref().unwrap() + sonar_sweep_data[position + 1].as_ref().unwrap() + sonar_sweep_data[position + 2].as_ref().expect("Out of index");
+            let sum = item.as_ref().unwrap() + sonar_sweep_data[position + 1].as_ref().unwrap() + sonar_sweep_data[position + 2].as_ref().unwrap();
             sum_collection.push(sum);
         }
     }
