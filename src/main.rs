@@ -1,5 +1,6 @@
 use std::{io};
 mod file_handler;
+mod dive;
 
 fn main() {
     println!("Welcher Tag soll ausgeführt werden?");
@@ -14,6 +15,7 @@ fn main() {
             input_value.truncate(len - 2);
             match input_value.as_str() {
                 "1" => print!("Du hast die 1 gewaehlt"),
+                "2" => dive::dive::execute_dive_task(),
                 _ => println!("Trage eine Zahl von 1 bis 24 und nicht {0}!", input)
             }
         }
